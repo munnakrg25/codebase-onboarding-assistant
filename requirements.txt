@@ -1,0 +1,13 @@
+langgraph
+langchain-google-genai
+faiss-cpu
+GitPython
+pydantic
+python-dotenv
+tqdm
+pytest
+sentence-transformers
+numpy
+google-genai
+python-dotenv
+streamlit

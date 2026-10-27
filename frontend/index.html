@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebase Onboarding Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="logo">CodeGuide<span> AI</span></a>
+
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#guide">Reading Guide</a>
+            <a href="#issues">Good First Issues</a>
+            <a href="#patch">Suggested Patch</a>
+            <a href="#search">Search</a>
+        </nav>
+
+        <div class="api-status">
+            <span class="status-dot"></span>
+            API Connected
+        </div>
+    </header>
+
+    <main class="container" id="home">
+
+        <section class="welcome">
+            <p class="eyebrow">AI-POWERED DEVELOPER TOOL</p>
+            <h1>Understand any codebase <span>faster.</span></h1>
+            <p class="subtitle">
+                Explore project architecture, discover important files,
+                find beginner-friendly issues, and search code using AI.
+            </p>
+
+            <div class="repo-input">
+                <input
+                    type="text"
+                    id="repoUrl"
+                    placeholder="Enter repository path or GitHub URL"
+                >
+                <button id="analyzeBtn">Analyze Repository</button>
+            </div>
+
+            <p id="status" class="status-message">
+                Connecting to FastAPI...
+            </p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <p>Total Files</p>
+                <h2 id="totalFiles">--</h2>
+                <span>Indexed files</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Lines</p>
+                <h2 id="totalLines">--</h2>
+                <span>Repository size</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Key Technologies</p>
+                <h2 id="technologies">Python</h2>
+                <span>Detected stack</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Project Type</p>
+                <h2 id="projectType">Python</h2>
+                <span>Repository type</span>
+            </div>
+        </section>
+
+        <section class="dashboard">
+
+            <div class="main-panel">
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow">PROJECT INSIGHTS</p>
+                        <h2 id="reportTitle">Architecture Summary</h2>
+                    </div>
+
+                    <button id="downloadBtn" class="secondary-btn">
+                        Download Report
+                    </button>
+                </div>
+
+                <div id="reportContent" class="report-content">
+                    <div class="welcome-message">
+                        <h3>Your codebase insights will appear here.</h3>
+                        <p>
+                            Click Analyze Repository to generate the
+                            architecture summary, reading guide, and
+                            beginner-friendly issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="side-panel">
+                <div class="panel-card">
+                    <h3>Quick Actions</h3>
+                    <p class="panel-description">Explore your codebase</p>
+
+                    <button class="action-btn" data-page="architecture">
+                        Architecture Summary
+                    </button>
+
+                    <button class="action-btn" data-page="guide">
+                        Developer Reading Guide
+                    </button>
+
+                    <button class="action-btn" data-page="issues">
+                        Find Good First Issues
+                    </button>
+
+                    <button class="action-btn" data-page="patch">
+                        View Suggested Patch
+                    </button>
+
+                    <button class="action-btn" data-page="search">
+                        Search Codebase
+                    </button>
+                </div>
+
+                <div class="panel-card activity-card">
+                    <h3>Recent Activity</h3>
+                    <div id="activity">
+                        <p class="empty-activity">No activity yet.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </section>
+
+        <footer>
+            <p>CodeGuide AI — Codebase Onboarding Assistant</p>
+            <p>Built with FastAPI, LangGraph and Gemini</p>
+        </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
