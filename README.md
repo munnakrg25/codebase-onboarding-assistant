@@ -399,8 +399,6 @@ MIT
 Name: Munna Kumar
 ```
 
-Replace the placeholders above with your real details before sharing the repository professionally.
-
 ## 19. Summary
 
 This project is a beginner-friendly but practical repository onboarding tool for exploring unfamiliar codebases. It uses repository scanning, embeddings, and AI-assisted analysis to help developers identify key files, ask natural-language questions about the code, and understand the structure of a project more quickly.
