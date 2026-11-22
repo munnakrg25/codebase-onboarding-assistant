@@ -61,7 +61,7 @@ In practice, the project reads repository files, creates searchable chunks, conv
 | Embedding model | Sentence Transformers |
 | Git access | GitPython |
 | AI generation | Google Gemini / `google-genai` |
-| Frontend UI | Streamlit |
+| Frontend UI | FastAPI |
 | Testing | pytest |
 | Environment management | uv |
 | Dependency support | Python-dotenv |
@@ -391,14 +391,12 @@ Before submitting a contribution, it is recommended to run the current test suit
 
 ## 17. License
 
-No license file was found in the repository at the time of writing this README. The project does not currently declare a license, so it should be treated as unlicensed unless a license is added later.
+MIT
 
 ## 18. Author
 
 ```text
-Name: Your Name
-LinkedIn: https://www.linkedin.com/in/your-profile
-GitHub: https://github.com/your-username
+Name: Munna Kumar
 ```
 
 Replace the placeholders above with your real details before sharing the repository professionally.
